@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Duel FPS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hud-bar">
+        <h1>Arena Duel FPS</h1>
+        <div class="stats">
+          <span id="player-health">Player HP: 100</span>
+          <span id="enemy-health">Enemy HP: 100</span>
+          <span id="status">Fight!</span>
+        </div>
+      </header>
+
+      <section class="game-wrap">
+        <canvas id="game-canvas" width="960" height="540" aria-label="3D arena game"></canvas>
+        <div class="crosshair" aria-hidden="true"></div>
+      </section>
+
+      <section class="controls">
+        <p><strong>Controls:</strong> Arrow keys to move/turn, <strong>Space</strong> to shoot.</p>
+        <button id="restart-btn" type="button">Restart Match</button>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>

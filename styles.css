@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at center, #1e2538 0%, #0d111a 70%);
+  color: #ecf0f4;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hud-bar h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.game-wrap {
+  position: relative;
+  margin-top: 1rem;
+  border: 2px solid #4f627f;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.crosshair {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.crosshair::before {
+  top: 13px;
+  left: 0;
+  width: 28px;
+  height: 2px;
+}
+
+.crosshair::after {
+  left: 13px;
+  top: 0;
+  width: 2px;
+  height: 28px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.controls p {
+  margin: 0;
+}
+
+#restart-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  background: #59d4ff;
+  color: #00111b;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  filter: brightness(1.08);
+}
